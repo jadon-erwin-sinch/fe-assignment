@@ -1,60 +1,101 @@
-### Thoughts and shortcomings
+## Assignment Instructions
 
-My take on this assignment is using plain React and Styled components.
-Unit testing with Jest, Integration testing with Cypress.
+You are tasked with making a couple modifications to an application:
 
-I focused a lot on separating the data from app states, by writing individual hooks for each api entity, and then consuming and handling the data in the root `AppProvider`. That way, `useApp` is responsible for throwing errors, keeping track of data lists and toggling states while being fed data from the api hooks.
-The point is for these hooks to never invoke each other directly, but to act as tools for actions performed by views and components.
+![image](https://github.com/jadon-erwin-sinch/fe-assignment/assets/106837621/b144218c-113c-47a2-959f-19b8a4699785)
 
-My biggest flaw during this assignment is by far the router handling. Lots has happened since last time I interacted with React Router, and even though I tried my best to configure empty states, loading states, path tracing and so on, I had to focus my time on improving other more essential aspects of the application to stay within the given time frame. I'm sure it'll become more clear next time around.
+This is a dummy application used for the sole purpose of determining the technical qualifications of SR. FE candidates. An experienced FE engineer might be able to fix all of the issues in 1-2 hours (on a good day). Please do not spend more than 2 hours on this task even if it means not completing all of the tasks. You do not need to fix the issues in order. Please leave the 
 
-Due to this, you'll see that I just stacked the 2 modules on top of each other for this assignment. There is no real way of making a mobile friendly version where both the application list and the settings panel are displayed simultaneously, as it is in desktop mode. The application list would instead have to act as a navigation menu and actually navigate the whole view to a "settings page" for things to fit.
+There are 4 issues with the application:
+1) Two buttons need styling (edit and delete)
+2) Notifications are not showing up (we are using toast notifications)
+3) The back-button isn't doing anything
+4) The "delete app" API isn't working
+***
 
+### *** Please note this app uses a shared server. Anything you do will saved on the server visible to others. Be sure to add new apps for testing out the delete API
+***
 
-### Key takeaways
+## Task Details:
 
-After reading the task description, my understanding was the following; An application can't be created without having an environment assigned to it, and an environment can't in turn be created without a configuration attached to it.
-As a result of this complexity, a lot of time went into making each form section generic enough to be reused in different places. In unison or on their own.
+### 1) Demonstrate your ability to style html components. 
+Style the Edit and Delete buttons, one using inline CSS and the other using a CSS/Style Framework of your choosing (MUI, Bootstrap, Tailwind, Styled Components, etc.)
 
-All this led up to an interesting solution of separating all form actions into hooks. Validations and submission callbacks could therefore now be imported anywhere they were needed without actually hosting specific form data.
+![image](https://github.com/jadon-erwin-sinch/fe-assignment/assets/106837621/ca142b6a-4e88-4c63-ab4b-f5b84de8f1c3)
 
-Speaking of form validation. There are so many ways of doing this, some better than others probably. The way this validation works, is that the inputs get validated for every character you type, but won't actually prompt an error until it's "dirty". Which in this case means once you've tried to submit the form at least once. After that you'll be reactively error prompted until a correct value is provided.
+### 2) Notifications are not showing up. 
+Scattered throughout the application are toasts. They look like this: 
+```
+toast.success("Application successfully updated")
+```
+When working properly a toast notification will appear in the top-right of the application:
 
-### Things to improve
+![image](https://github.com/jadon-erwin-sinch/fe-assignment/assets/106837621/ddec12ec-a9cf-4d71-a994-92379355a888)
 
-* Error handling can be refined, prompting custom error messages for different scenarios instead of a generic banner.
+Here is a link to the react-toastify docs: https://fkhadra.github.io/react-toastify/introduction/
 
-* Pagination of the application list, if and when it becomes too long, ideally already done in the backend response.
+### 3) The back-button does not work.
+When you are editing an app or environment, clicking the back button should bring you back to the previous page
 
-* The navigation needs improvement, for users to be able to properly refer and link to a specific page or search result.
+![image](https://github.com/jadon-erwin-sinch/fe-assignment/assets/106837621/17004567-2263-4d6d-a8e3-98190d590a4b)
 
-* Component library can be more generic and reusable. Key elements like dropdowns, inputs and radio buttons can be customized site-wide for a neater look in all browsers.
+### 4) The "delete app" API isn't working.
+Clicking the delete button doens't do anything
 
-* Search input deserves a debouncer to minimize number of requests sent.
+### *** Please note the server is not local. Create new apps to testing delete capability as anything you do will saved on the server.
 
-* Responsive mobile view needs some serious love.
+![image](https://github.com/jadon-erwin-sinch/fe-assignment/assets/106837621/fd27e941-6a2a-4347-a96b-54696a9bb3cc)
 
+### Helpful hints
+1) You shouldn't need to write much code to fix any of the issues
+2) Knowing how to navigate the repository and identifying root causes of issues will be essential to your success.
 
-### Available Scripts
+***
 
-#### `yarn start`
+## Setup:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1) Clone this repository
+2) Run ```npm i``` to install the required packaged
+3) Run ```npm start``` to run the application
 
-#### `yarn test`
+## Submission:
 
-Run unit and module tests.
+In order to keep your solutions private (and hidden from other candidates) we are going to you email your solutions.
 
-#### `yarn test-integration`
+Copy the following and paste your solutions
 
-Run integration tests with Cypress.
-Make sure to run the app server `yarn test` in a separate terminal prior to running this.
+```
+1) Styling Buttons:
+------------------------------
+- name of file(s)
 
-#### `yarn build`
+// code
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+------------------------------
 
-The build is minified and the filenames include the hashes.\
-The app is ready to be deployed.
+2) Notifications aren't showing up
+------------------------------
+- name of file(s)
+
+// code
+
+------------------------------
+
+3) Back button
+------------------------------
+- name of file(s)
+
+// code
+
+------------------------------
+
+4) Delete App API
+------------------------------
+- name of file(s)
+
+// code
+
+------------------------------
+```
+
+Email the solutions to Jadon.Erwin@sinch.com with Ryan.mette@sinch.com and John.orifice@sinch.com
