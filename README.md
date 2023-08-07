@@ -4,7 +4,7 @@ You are tasked with making a couple modifications to an application:
 
 ![image](https://github.com/jadon-erwin-sinch/fe-assignment/assets/106837621/b144218c-113c-47a2-959f-19b8a4699785)
 
-This is a dummy application used for the sole purpose of determining the technical qualifications of SR. FE candidates. An experienced FE engineer might be able to fix all of the issues in 1-2 hours (on a good day). Please do not spend more than 2 hours on this task even if it means not completing all of the tasks. You do not need to fix the issues in order. Please leave the 
+This is a dummy application used for the sole purpose of determining the technical qualifications of SR. FE candidates. An experienced FE engineer might be able to fix all of the issues in 1-2 hours (on a good day). Please do not spend more than 2 hours on this task even if it means not completing all of the tasks. You do not need to fix the issues in order.
 
 There are 4 issues with the application:
 1) Two buttons need styling (edit and delete)
@@ -42,7 +42,7 @@ When you are editing an app or environment, clicking the back button should brin
 ### 4) The "delete app" API isn't working.
 Clicking the delete button doens't do anything
 
-### *** Please note the server is not local. Create new apps to testing delete capability as anything you do will saved on the server.
+### *** Please note the server is not local. Create new apps for testing delete capability as anything you do will saved on the server.
 
 ![image](https://github.com/jadon-erwin-sinch/fe-assignment/assets/106837621/fd27e941-6a2a-4347-a96b-54696a9bb3cc)
 
@@ -60,7 +60,7 @@ Clicking the delete button doens't do anything
 
 ## Submission:
 
-In order to keep your solutions private (and hidden from other candidates) we are going to you email your solutions.
+In order to keep your solutions private (and hidden from other candidates) we are going to ask you to email your solutions.
 
 Copy the following and paste your solutions
 
